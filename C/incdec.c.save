@@ -1,0 +1,6 @@
+#include<stdio.h>
+int main(){
+	int a=10,b10;
+	int x=++a,y=b++;
+	printf("a=%d\tb=%d\n",a,b);
+	

@@ -1,0 +1,14 @@
+#include<stdio.h>
+void toggle(char*);
+int main(){
+	char str[]="AllAhAbAd";
+	printf("%s\n",str);
+	toggle(str);
+	printf("%s\n",str);
+	return 0;
+}
+void toggle(char* s){
+	for(int i=0;s[i]!='0';i++){
+		s[i]= s[i] & 32;
+	}
+}
