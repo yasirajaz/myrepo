@@ -1,0 +1,6 @@
+#!/bin/bash
+for((i=00;i<10;i++))
+do
+	echo "$i"
+	sleep 2
+done
