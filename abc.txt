@@ -1,0 +1,6 @@
+total 28
+-rw-rw-r-- 1 ubuntu ubuntu     0 Dec 26 17:47 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu   120 Dec 26 17:33 display.html
+-rwxr-xr-x 1 ubuntu ubuntu    45 Dec 24 18:26 first.sh
+-rwxrwxr-x 1 ubuntu ubuntu 15960 Dec 23 17:42 ya
+-rw-rw-r-- 1 ubuntu ubuntu    63 Dec 23 17:42 yasir.c

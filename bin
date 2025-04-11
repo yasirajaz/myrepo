@@ -1,0 +1,12 @@
+#!/bin/bash
+x="/etc/passwd"
+if [ -e $x ];then
+	echo "$x is an exixting file"
+	if [ -w $x ];then
+		echo "$x is writtable"
+	else
+		echo "$x is not writtable"
+	fi
+else
+	echo "$x is not an exixting file"
+fi

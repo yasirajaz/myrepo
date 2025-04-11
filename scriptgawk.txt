@@ -1,0 +1,7 @@
+BEGIN {
+print "the data file content:"
+}
+{print $1}
+END {
+print "end of data"
+}
