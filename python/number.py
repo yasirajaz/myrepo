@@ -1,0 +1,10 @@
+x=100000
+y=1_000_000
+print(x)
+print(y)
+a=234_12.3_34_344
+print(a)
+b,c,d=2,3,4
+print(b)
+print(c)
+print(d)
