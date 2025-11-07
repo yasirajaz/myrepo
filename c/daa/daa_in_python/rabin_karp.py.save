@@ -1,0 +1,28 @@
+#def matcher(T,P,s,m):
+#	for j in range(m):
+#		if T[s + j] != P[j]:
+#			return -1
+#	return 0
+def rabin_karp_matcher(T,P,q):
+	n=len(T)
+	m=len(P)
+	p=0
+	t=0
+	for i in range(m):
+		p=(256*p+ord(P[i]))%q
+		t=(256*t+ord(T[i]))%q
+	for s in range(n-m+1):
+		if p==t:
+			if T[s:s+m] == P:
+				print("pattern occured at shift ",{s})
+
+			#if matcher(T,P,s,m) == 0:
+			#	print("match is found at shift",s)
+			#else:
+			#	print("no match is found of th given pattern")
+		if s<n-m:
+			t=(256* (t-ord(T[s])*pow(256,m-1,q)(+ord(T[s+m]))%q
+a="abcdaadasdadsdfsnjfnvvfjf"
+b="ad"
+q=3
+rabin_karp_matcher(a,b,q)
