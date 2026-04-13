@@ -1,0 +1,6 @@
+public class RecordTEster{
+	public static void main(String[] args){
+		MyRecord mr=new MyRecord(55,"ziad khan");
+		System.out.println(mr.name+"  "+mr.age);
+	}
+}
