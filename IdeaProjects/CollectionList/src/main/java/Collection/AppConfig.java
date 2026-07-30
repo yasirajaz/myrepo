@@ -1,0 +1,22 @@
+package Collection;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Configuration
+@ComponentScan(basePackages = ("Collection"))
+public class AppConfig {
+    @Bean
+    public List<Integer> list(){
+        List<Integer> li=new ArrayList<>();
+        li.add(10);
+        li.add(20);
+        li.add(30);
+        li.add(40);
+        return li;
+    }
+}
