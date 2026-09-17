@@ -22,15 +22,24 @@ public class Register implements Model{
         String dob = request.getParameter("dob");
         String gender = request.getParameter("gender");
 
-        /*System.out.println("Email: " + email);
+        System.out.println("Email: " + email);
         System.out.println("Password: " + password);
         System.out.println("First Name: " + firstname);
         System.out.println("Last Name: " + lastname);
         System.out.println("DOB: " + dob);
-        System.out.println("Gender: " + gender);*/
+        System.out.println("Gender: " + gender);
 
         RegisterDao rd=new RegisterDao();
-        rd.registerUser(email,password,firstname,lastname,gender,dob);
+        
+
+        int genderValue;
+
+        if (gender.equals("Female")) {
+             genderValue = 1;
+        } else {
+            genderValue = 2;
+        }
+        rd.registerUser(email,password,firstname,lastname,dob,genderValue);
         return "registered";    
     }
     
