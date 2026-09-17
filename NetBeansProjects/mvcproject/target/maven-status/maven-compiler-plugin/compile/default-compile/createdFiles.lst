@@ -1,0 +1,6 @@
+in/ac/iul/mvcproject/JakartaRestConfiguration.class
+in/ac/iul/mvcproject/resources/JakartaEE11Resource.class
+models/Login.class
+models/Register.class
+models/Model.class
+controller/FrontController.class

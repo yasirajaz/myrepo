@@ -13,5 +13,20 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <%! 
+            int count=0;
+            int age=20;
+        %>
+        <%
+            count++;
+            out.println(count);
+        %>
+        <%= 
+            "Lucknow" 
+        %>
+        <% 
+            out.println(age); 
+        %>
+                
     </body>
 </html>

@@ -152,9 +152,32 @@
         <servlet-name>session2</servlet-name>
         <url-pattern>/session2</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>A</servlet-name>
+        <jsp-file> WEB-INF/shopping.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>A</servlet-name>
+        <url-pattern>/shopping</url-pattern> 
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>mypage</servlet-name>
+        <jsp-file>mypage.jsp</jsp-file>
+        <init-param>
+            <param-name>city</param-name>
+            <param-value>Lucknow</param-value>
+        </init-param>
+    </servlet>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/JSP/my404error.jsp</location>
+    </error-page>
 </web-app>

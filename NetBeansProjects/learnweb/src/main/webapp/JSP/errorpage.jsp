@@ -1,10 +1,13 @@
 <%-- 
-    Document   : welcome.jsp
-    Created on : 27 Aug 2026, 7:04:02 am
+    Document   : errorpage
+    Created on : 3 Sept 2026, 6:56:07 am
     Author     : ubuntu
 --%>
 
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.ArrayList" %>
+<%@page errorPage="myerrorpage.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,20 +16,9 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <%! 
-            int count=0;
-            int age=20;
-        %>
         <%
-            count++;
-            out.println(count);
+            List<String> list=null;
+            list.add("lucknow");
         %>
-        <%= 
-            "Lucknow" 
-        %>
-        <% 
-            out.println(age); 
-        %>
-                
     </body>
 </html>
