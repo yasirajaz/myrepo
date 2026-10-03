@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css"
+          rel="stylesheet"
+          type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css"
+          rel="stylesheet"
+          type="text/css">
+
+    <title>My Website</title>
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+         ========================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #174C92;">
+        <div class="container">
+            <!-- Website Name -->
+            <a class="navbar-brand fw-bold"
+               href="index.html">
+                My Website
+            </a>
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+                <!-- Left Side Navbar -->
+                <ul class="navbar-nav me-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <!-- About -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#">
+                            About
+                        </a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Services
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+
+
+                            <li>
+
+                                <a class="dropdown-item"
+                                   href="#">
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                   href="#">
+                                    Services
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                   href="https://www.google.com"
+                                   target="_blank">
+                                    Google
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                   href="https://www.whatsapp.com"
+                                   target="_blank">
+                                    WhatsApp
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                   href="https://www.instagram.com"
+                                   target="_blank">
+                                    Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Contact -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <!-- Search Form -->
+                <form class="d-flex"
+                      onsubmit="return false;">
+                    <input class="form-control me-2"
+                           type="search"
+                           placeholder="Search"
+                           aria-label="Search">
+                    <button class="btn btn-success"
+                            type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- =========================
+         CENTER FORM
+         ========================= -->
+    <div class="form-container">
+        <div class="card login-card shadow">
+            <!-- Form Header -->
+            <div class="card-header text-white" style="background-color: #174C92 ;">
+                <h3 class="mb-0">
+                    Register User
+                </h3>
+            </div>
+            <!-- Form Body -->
+            <div class="card-body">
+               <form action="CheckUser" method="POST">
+                    <!-- Email -->
+                    <div class="mb-3">
+
+                        <label for="eml"
+                               class="form-label">
+
+                            Email
+                        </label>
+                        <input type="email"
+                               id="eml"
+                               name="email"
+                               class="form-control"
+                               placeholder="Enter Email"
+                               required>
+                    </div>
+                    <!-- Password -->
+                    <div class="mb-3">
+                        <label for="pwd"
+                               class="form-label">
+                            Password
+                        </label>
+                        <input type="password"
+                               id="pwd"
+                               name="pwd"
+                               class="form-control"
+                               placeholder="Enter Password"
+                               required>
+                    </div>
+                    <!-- Submit -->
+                    <button type="submit" class="btn text-white login-btn" style="background-color: #174C92 ;">
+                        Register
+                    </button>
+                </form>
+                <div id="userAlert" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+                    <strong>User already exists!</strong>
+                    <button type="button" class="btn-close" onclick="document.getElementById('userAlert').style.display='none';">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer class="text-center text-white py-3" style="background-color: #174C92;">
+
+        © 2026 My Website
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
+
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <!-- Your AJAX JavaScript -->
+    <script src="js/asynreq.js"></script>
+    
+
+</body>
+
+</html>

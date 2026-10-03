@@ -1,0 +1,99 @@
+/* =========================
+   PAGE
+   ========================= */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    min-height: 55px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 8px;
+}
+
+
+/* Dropdown */
+
+.dropdown-menu {
+    min-width: 150px;
+}
+
+
+/* =========================
+   CENTER FORM
+   ========================= */
+
+.form-container {
+
+    min-height: calc(100vh - 129px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    border: none;
+
+    border-radius: 12px;
+
+}
+
+
+.login-card .card-header {
+    text-align: center;
+    padding: 18px;
+   
+}
+
+
+.login-card .card-body {
+    padding: 30px;
+}
+/* =========================
+   REGISTER BUTTON
+   ========================= */
+.login-btn {
+   width: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    flex: 1;
+}
