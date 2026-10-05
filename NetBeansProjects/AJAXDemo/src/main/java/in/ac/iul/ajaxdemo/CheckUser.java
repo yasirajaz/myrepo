@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-
+import org.json.simple.JSONObject;
 /**
  *
  * @author ubuntu
@@ -54,6 +54,12 @@ public class CheckUser extends HttpServlet {
             } else {
                 resdata="{\"exist\":\"false\"}";
             }
+            
+            JSONObject obj=new JSONObject();
+            obj.put("name","Ajay");
+            obj.put("college","Integral");
+            String s=obj.toJSONString();
+            out.print(s);
             out.print(resdata);
 
         } catch (Exception e) {
