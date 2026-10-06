@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 /**
  *
@@ -55,11 +56,16 @@ public class CheckUser extends HttpServlet {
                 resdata="{\"exist\":\"false\"}";
             }
             
-            JSONObject obj=new JSONObject();
-            obj.put("name","Ajay");
-            obj.put("college","Integral");
-            String s=obj.toJSONString();
-            out.print(s);
+          /**  JSONObject obj1=new JSONObject();
+            JSONObject obj2=new JSONObject();
+            JSONArray list=new JSONArray();
+            list.add("hindi");
+            list.add("english");
+            obj2.put("name","Ajay");
+            obj2.put("subject",list);
+            obj1.put("student",obj2);
+            String s=obj1.toJSONString();
+            out.print(s);**/
             out.print(resdata);
 
         } catch (Exception e) {
