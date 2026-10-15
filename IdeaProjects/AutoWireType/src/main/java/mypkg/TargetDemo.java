@@ -19,7 +19,7 @@ public class TargetDemo {
         this.ad=ad;
         System.out.println("const with arg");
     }
-    @Autowired
+    @Autowired  
     public void setAutoDemo(AutoDemo ad){
         this.ad=ad;
         System.out.println("setter");
