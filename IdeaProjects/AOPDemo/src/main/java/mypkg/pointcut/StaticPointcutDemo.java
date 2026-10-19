@@ -7,7 +7,7 @@ import org.springframework.aop.support.*; //DefautPointcutAdvisor StaticMethodMa
 import java.lang.reflect.Method;
 
 
-class SimpleStaticPointcut extends StaticMethodMatcherPointcut{
+class SimpleStaticPointcut extends NameMatchMethodPointcut{
     @Override
     public boolean matches(Method method,Class<?> cls){
         return ("sing".equals(method.getName()));
