@@ -7,4 +7,5 @@ public interface Singer {
     default void sing(String key){
         logger.info("Singing in the key of {}",key);
     }
+    void rest();
 }

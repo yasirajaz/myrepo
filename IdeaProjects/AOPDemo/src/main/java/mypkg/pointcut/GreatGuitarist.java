@@ -8,4 +8,9 @@ public class GreatGuitarist implements Singer{
     public void sing(){
         logger.info("Dil ke armaan aansuo me beh gye");
     }
+
+    @Override
+    public void rest() {
+
+    }
 }

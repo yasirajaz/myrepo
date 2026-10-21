@@ -7,4 +7,9 @@ public class GoodGuitarist implements Singer{
     public void sing(){
         logger.info("I am a rockstar");
     }
+
+    @Override
+    public void rest() {
+
+    }
 }

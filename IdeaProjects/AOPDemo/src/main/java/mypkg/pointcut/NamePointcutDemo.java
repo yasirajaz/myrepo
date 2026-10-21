@@ -11,6 +11,7 @@ public class NamePointcutDemo {
     public static void main(String[] args) {
         GrammyGuitarist john=new GrammyGuitarist();
         NameMatchMethodPointcut pc=new NameMatchMethodPointcut();
+        //manually adding method by name
         pc.addMethodName("sing");
         pc.addMethodName("rest");
         Advisor advisor=new DefaultPointcutAdvisor(pc,new SimpleAroundAdvice());
