@@ -1,5 +1,4 @@
 package mypkg.proxies;
-
 public class DefaultSimpleBean implements SimpleBean {
     @Override
     public void advised() {

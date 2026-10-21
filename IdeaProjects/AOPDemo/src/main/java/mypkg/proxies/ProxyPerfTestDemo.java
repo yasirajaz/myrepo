@@ -1,8 +1,7 @@
 package mypkg.proxies;
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.slf4j.*;
 import org.springframework.aop.Advisor;
 import org.springframework.aop.framework.Advised;
 import org.springframework.aop.framework.ProxyFactory;
@@ -11,7 +10,8 @@ import org.springframework.aop.support.NameMatchMethodPointcutAdvisor;
 public class ProxyPerfTestDemo {
     private static Logger LOGGER = LoggerFactory.getLogger(ProxyPerfTestDemo.class);
     public static void main(String... args) {
-        SimpleBean target = new DefaultSimpleBean();
+        SimpleBean target = new DefaultSimpleBean(); //lisco substitution
+        //SimpleBean interface ko implement kia h defaultsimple class ne
         NameMatchMethodPointcutAdvisor advisor = new NameMatchMethodPointcutAdvisor(new
                         NoOpBeforeAdvice());
         advisor.setMappedName("advised");
@@ -22,7 +22,7 @@ public class ProxyPerfTestDemo {
     }
     private static void runCglibTests(Advisor advisor, SimpleBean target) {
         ProxyFactory pf = new ProxyFactory();
-        pf.setProxyTargetClass(true);
+        pf.setProxyTargetClass(true); //cglib class ke through hota h
         pf.setTarget(target);
         pf.addAdvisor(advisor);
         SimpleBean proxy = (SimpleBean)pf.getProxy();
@@ -43,7 +43,7 @@ public class ProxyPerfTestDemo {
         ProxyFactory pf = new ProxyFactory();
         pf.setTarget(target);
         pf.addAdvisor(advisor);
-        pf.setInterfaces(SimpleBean.class);
+        pf.setInterfaces(SimpleBean.class); //jdk proxy works with interfaces only
         SimpleBean proxy = (SimpleBean)pf.getProxy();
         var testResults = test(proxy);
         LOGGER.info(" --- JDK Test results ---\n {} ", testResults);

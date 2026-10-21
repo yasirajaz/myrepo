@@ -1,10 +1,7 @@
 package mypkg.proxies;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.swing.*;
-
+import org.apache.commons.lang3.builder.ToStringBuilder;
 public class TestResults {
     private static Logger LOGGER = LoggerFactory.getLogger(TestResults.class);
     long advisedMethodTime;
@@ -14,6 +11,7 @@ public class TestResults {
     long proxyTargetTime;
     @Override
     public String toString() {
+        //ToStringBuilder is utility class of common lang which converts objects into string
         return new ToStringBuilder(this)
         .append("advised", advisedMethodTime)
         .append("unadvised", unadvisedMethodTime)
